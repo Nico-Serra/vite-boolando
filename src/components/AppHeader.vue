@@ -1,7 +1,14 @@
 <script>
 
-export default{
-    name: 'AppHeader'
+export default {
+    name: 'AppHeader',
+    data() {
+        return {
+            visible: false,
+            visibleMan: false,
+            visibleKids: false,
+        }
+    }
 }
 </script>
 
@@ -9,9 +16,34 @@ export default{
     <header id="site_header">
         <div class="container d-flex">
             <ul class="gender d-flex">
-                <li class="padding-left"><a href="">Donna</a></li>
-                <li class="padding-left"><a href="">Uomini</a></li>
-                <li class="padding-left"><a href="">Bambini</a></li>
+                <li class="padding-left">
+                    <a href="" @mouseover="visible = true" @mouseout="visible = false">Donna</a>
+                    <div v-show="visible === true" class="sub_menu" @mouseover="visible = true"
+                        @mouseout="visible = false">
+                        <div>Abbigliamento</div>
+                        <div>scarpe</div>
+                        <div>accessori</div>
+                    </div>
+                </li>
+                <li class="padding-left">
+                    <a href="" @mouseover=" visibleMan = true" @mouseout=" visibleMan = false">Uomo</a>
+                    <div v-show="visibleMan === true" class="sub_menu" @mouseover=" visibleMan = true"
+                        @mouseout=" visibleMan = false">
+                        <div>Abbigliamento</div>
+                        <div>scarpe</div>
+                        <div>accessori</div>
+                    </div>
+                </li>
+                <li class="padding-left">
+                    <a href="" @mouseover="visibleKids = true" @mouseout="visibleKids = false">Bambino</a>
+                    <div v-show="visibleKids === true" class="sub_menu" @mouseover="visibleKids = true"
+                        @mouseout="visibleKids = false">
+                        <div>Abbigliamento</div>
+                        <div>scarpe</div>
+                        <div>accessori</div>
+                    </div>
+                </li>
+
             </ul>
             <img src="/img/boolean-logo.png" alt="" class="logo">
             <ul class="icon d-flex">
@@ -24,6 +56,4 @@ export default{
 
 </template>
 
-<style>
-
-</style>
+<style></style>

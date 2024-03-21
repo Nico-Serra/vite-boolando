@@ -11,4 +11,18 @@ header {
         text-align: end;
 
     }
+
+    
+}
+
+.sub_menu{
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 1;
+
+    div{
+        padding: 0.5rem;
+        border-bottom: 0.5px solid lightgrey;
+    }
 }
