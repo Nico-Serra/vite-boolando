@@ -1,0 +1,16 @@
+@use './partials/variables' as *;
+@use './partials/common';
+@use './partials/utilities';
+
+header {
+    background-color: $boolando-primary;
+
+    .logo {
+        width: 10%;
+    }
+
+    .icon {
+        text-align: end;
+
+    }
+}
