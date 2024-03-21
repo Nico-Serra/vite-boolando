@@ -7,6 +7,9 @@ export default {
             visible: false,
             visibleMan: false,
             visibleKids: false,
+            visibleProfile: false,
+            visibleFavorites: false,
+            visibleShop: false,
         }
     }
 }
@@ -47,9 +50,31 @@ export default {
             </ul>
             <img src="/img/boolean-logo.png" alt="" class="logo">
             <ul class="icon d-flex">
-                <li class="padding-right"><a href=""><i class="fa-regular fa-user"></i></a></li>
-                <li class="padding-right"><a href=""><i class="fa-regular fa-heart"></i></a></li>
-                <li class="padding-right"><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="padding-right">
+                    <a href=""  @mouseover="visibleProfile = true" @mouseout="visibleProfile = false"><i class="fa-regular fa-user"></i></a>
+                    <div v-show="visibleProfile === true" class="sub_menu2">
+                        <div>Il Mio profilo</div>
+                        <div>Accedi</div>
+                        <div>Registrati</div>
+                    </div>
+                </li>
+                <li class="padding-right">
+                    <a href="" @mouseover="visibleFavorites = true" @mouseout="visibleFavorites = false"><i class="fa-regular fa-heart"></i></a>
+                    <div v-show="visibleFavorites === true" class="sub_menu2">
+                        <div>I tuoi preferiti</div>
+                        <div>Aggiungi</div>
+                        <div>Rimuovi</div>
+                    </div>
+                </li>
+                <li class="padding-right">
+                    <a href="" @mouseover="visibleShop = true" @mouseout="visibleShop = false"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <div v-show="visibleShop === true" class="sub_menu2">
+                        <div>Aggiungi al carrello</div>
+                        <div>Rimuovi dal carrello</div>
+                        <div>Procedi con il pagamento</div>
+                    </div>
+
+                </li>
             </ul>
         </div>
     </header>
