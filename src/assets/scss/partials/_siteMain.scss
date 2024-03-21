@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 #site_main {
     padding-bottom: 6rem;
     padding-top: 1.5rem;
@@ -37,7 +39,7 @@
 }
 
 .sales {
-    background-color: var(--boolando-accent);
+    background-color: $boolando-accent;
     position: absolute;
     bottom: 20px;
     font-weight: bold;
@@ -48,7 +50,7 @@
 
 
 .eco {
-    background-color: var(--boolando_secondary);
+    background-color: $boolando_secondary;
     position: absolute;
     bottom: 20px;
     left: 40px;
@@ -60,7 +62,7 @@
 }
 
 .eco_top {
-    background-color: var(--boolando_secondary);
+    background-color: $boolando_secondary;
     position: absolute;
     bottom: 20px;
     font-weight: bold;
