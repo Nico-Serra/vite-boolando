@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+header {
+    background-color: $boolando-primary;
+
+    .logo {
+        width: 10%;
+    }
+
+    .icon {
+        text-align: end;
+
+    }
+}

@@ -1,0 +1,154 @@
+#site_main {
+    padding-bottom: 6rem;
+    padding-top: 1.5rem;
+}
+
+.products {
+    gap: 1rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.product {
+    width: 33%;
+    height: 400px;
+    position: relative;
+}
+
+.levis {
+    background-image: url(../img/1.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.guess {
+    background-image: url(../img/2.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.come {
+    background-image: url(../img/3.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sales {
+    background-color: var(--boolando-accent);
+    position: absolute;
+    bottom: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 10px;
+    padding: 0.2rem 0.5rem;
+}
+
+
+.eco {
+    background-color: var(--boolando_secondary);
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    font-weight: bold;
+    color: white;
+    font-size: 10px;
+    padding: 0.2rem 0.5rem;
+
+}
+
+.eco_top {
+    background-color: var(--boolando_secondary);
+    position: absolute;
+    bottom: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 10px;
+    padding: 0.2rem 0.5rem;
+
+}
+
+.hearts {
+    text-align: center;
+    font-size: 20px;
+    width: 10%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+}
+
+.description_2 {
+    position: absolute;
+    top: 0;
+    left: 34%;
+}
+
+.description_3 {
+    position: absolute;
+    top: 0;
+    left: 68%;
+}
+
+
+.products_2 {
+    gap: 1rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+
+.description_4 {
+    position: absolute;
+    top: 10%;
+}
+
+.description_5 {
+    position: absolute;
+    top: 0;
+    left: 34%;
+}
+
+.description_6 {
+    position: absolute;
+    top: 0;
+    left: 68%;
+}
+
+.levis_2 {
+    background-image: url(../img/4.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maya {
+    background-image: url(../img/5.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.espirit {
+    background-image: url(../img/6.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.red {
+    color: red;
+}
+
+.gray {
+    color: gray;
+    text-decoration: line-through;
+}

@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+#site_footer{
+    background-color: $booladno-dark;
+    color: white;
+    padding: 1rem 0;
+}
+.srl{
+    font-size: 10px;
+}
+
+.social{
+    padding-left: 0.5rem;
+}
