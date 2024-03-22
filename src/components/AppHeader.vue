@@ -16,6 +16,7 @@ export default {
             userIcon: 'fa-solid fa-user',
             heartIcon: 'fa-regular fa-heart',
             shopIcon: 'fa-solid fa-bag-shopping',
+            logo:'/img/boolean-logo.png',
         }
     }
 }
@@ -54,7 +55,7 @@ export default {
                 </li>
 
             </ul>
-            <img src="/img/boolean-logo.png" alt="" class="logo">
+            <img :src="logo" alt="" class="logo">
             <ul class="icon d-flex">
                 <li class="padding-right">
                     <a href="" @mouseover="visibleProfile = true" @mouseout="visibleProfile = false"><i

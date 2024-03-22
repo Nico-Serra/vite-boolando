@@ -1,7 +1,19 @@
 @use './partials/variables' as *;
 @use './partials/siteHeader';
 @use './partials/common';
-@use './partials/utilities';
 @use './partials/siteMain';
 @use './partials/siteFooter';
-@use './partials/hoover';
+
+.hearts:hover {
+    color: red;
+}
+
+.card:hover {
+    .image1 {
+        display: none;
+    }
+
+    .image2 {
+        display: block;
+    }
+}

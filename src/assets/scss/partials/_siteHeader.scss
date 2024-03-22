@@ -3,38 +3,52 @@
 header {
     background-color: $boolando-primary;
 
+    a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+
     .logo {
         width: 10%;
     }
 
     .icon {
         text-align: end;
+        justify-content: space-between;
+        gap: 0.5rem;
+
 
     }
 
-    
+
 }
 
-.sub_menu{
+.gender {
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.sub_menu {
     background-color: white;
     color: black;
     position: absolute;
     z-index: 1;
 
-    div{
+    div {
         padding: 0.5rem;
         border-bottom: 0.5px solid lightgrey;
     }
 }
 
-.sub_menu2{
+.sub_menu2 {
     background-color: white;
     color: black;
     position: absolute;
     z-index: 1;
     width: 100px;
 
-    div{
+    div {
         padding: 0.5rem;
         border-bottom: 0.5px solid lightgrey;
     }
