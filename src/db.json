@@ -1,0 +1,76 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "visible": false,
+            "firstImage": "1.webp",
+            "secondImage": "1b.webp",
+            "price": "29.99€",
+            "salesPrice": "14.99€",
+            "discount": "50%",
+            "eco": "Sostenibilità",
+            "brand": "Levi's",
+            "nameProduct": "RELAXED FIT TEE UNISEX"
+        },
+        {
+            "id": 2,
+            "visible": false,
+            "firstImage": "2.webp",
+            "secondImage": "2b.webp",
+            "price": "29.99€",
+            "salesPrice": "20,99€",
+            "discount": "30%",
+            "eco": false,
+            "brand": "Guess",
+            "nameProduct": "ROSES TEE"
+        },
+        {
+            "id": 3,
+            "visible": false,
+            "firstImage": "3.webp",
+            "secondImage": "3b.webp",
+            "price": "184,99€",
+            "salesPrice": "129,99",
+            "discount": "30%",
+            "eco": false,
+            "brand": "Come Zucchero Filato",
+            "nameProduct": "VOGLIA DI COLORI PASTELLO"
+        },
+        {
+            "id": 4,
+            "visible": false,
+            "firstImage": "4.webp",
+            "secondImage": "4b.webp",
+            "price": "29.99€",
+            "salesPrice": "14.99€",
+            "discount": "50%",
+            "eco": "Sostenibilità",
+            "brand": "Levi's",
+            "nameProduct": "TEE UNISEX"
+        },
+        {
+            "id": 5,
+            "visible": false,
+            "firstImage": "5.webp",
+            "secondImage": "5b.webp",
+            "price": false,
+            "salesPrice": "14.99€",
+            "discount": false,
+            "eco": false,
+            "brand": "Maya Deluxe",
+            "nameProduct": "STRIPE BODICE"
+        },
+        {
+            "id": 6,
+            "visible": false,
+            "firstImage": "6.webp",
+            "secondImage": "6b.webp",
+            "price": false,
+            "salesPrice": "29.99€",
+            "discount": false,
+            "eco": "Sostenibilità",
+            "brand": "Espirit",
+            "nameProduct": "MAGLIONE - BLACK"
+        }
+    ]
+}
