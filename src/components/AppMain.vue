@@ -1,10 +1,11 @@
 <script>
 import ProductCard from './ProductCard.vue';
+import { state } from '../state'
 export default {
     name: 'AppMain',
     data() {
         return {
-            products: [
+            /*products: [
                 {
                     visible:false,
                     firstImage: '1.webp',
@@ -71,11 +72,19 @@ export default {
                     brand: "Espirit",
                     nameProduct: 'MAGLIONE - BLACK'
                 },
-            ]
+            ],*/
+            state,
+            urlApi: 'http://localhost:3000/products',
         }
     },
     components: {
         ProductCard
+    },
+    mounted() {
+        //console.log(this.state.products);
+        this.state.addElement(this.urlApi)
+        //console.log(state.products);
+        //console.log(state.products);
     }
 }
 </script>
@@ -83,9 +92,10 @@ export default {
 <template>
     <main id="site_main">
         <div class="container">
+            <!-- <p>{{ state.message }}</p> -->
             <div class="row">
-                <ProductCard :product="product" v-for="product in products"/>
-                
+                <ProductCard :product="product" v-for="product in state.products" />
+
             </div>
         </div>
 
