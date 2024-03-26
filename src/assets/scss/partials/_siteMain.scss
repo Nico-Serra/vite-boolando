@@ -191,3 +191,46 @@
     display: none;
 }
 
+.modal {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    z-index: 100;
+    background-color: white;
+    border: 0.5px solid lightgrey;
+    display: flex;
+
+    .image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            object-fit: cover
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+
+        h2 {
+            padding: 1rem 0;
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            font-size: 20px;
+        }
+    }
+
+}

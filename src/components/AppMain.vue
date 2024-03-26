@@ -3,6 +3,9 @@ import ProductCard from './ProductCard.vue';
 
 import { state } from '../state'
 
+import ProductModal from './ProductModal.vue'
+
+
 export default {
     name: 'AppMain',
     data() {
@@ -85,6 +88,7 @@ export default {
     },
     components: {
         ProductCard,
+        ProductModal,
 
     },
 
@@ -101,6 +105,9 @@ export default {
             this.singleProduct = product,
                 this.showModal = true
 
+        },
+        closeModal() {
+            this.showModal = false
         }
     }
 }
@@ -108,17 +115,7 @@ export default {
 
 <template>
     <main id="site_main">
-        <div v-if="showModal === true" class="modal">
-            <img :src="'/img/' + singleProduct.firstImage" alt="">
-            <img :src="'/img/' + singleProduct.secondImage" alt="">
-            <div class="text">
-                <h3>Brand: {{ singleProduct.brand }}</h3>
-                <h2>{{ singleProduct.nameProduct }}</h2>
-                <h4>Prezzo scontato: {{ singleProduct.salesPrice }}</h4>
-                <h4 v-if="singleProduct.price">Prezzo: {{ singleProduct.price }}</h4>
-                <span @click="showModal = false">❌</span>
-            </div>
-        </div>
+        <ProductModal :singleProduct="singleProduct" @closeModal="closeModal" v-if="showModal === true" />
         <div class="container">
             <h1></h1>
             <!-- <p>{{ state.message }}</p> -->
@@ -134,35 +131,5 @@ export default {
 </template>
 
 <style>
-.modal {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 90%;
-    z-index: 100;
-    background-color: white;
-    border: 1px solid;
 
-    img {
-        max-width: 50%;
-    }
-
-    .text {
-        text-align: center;
-        margin: 1rem;
-
-        h2{
-            padding: 1rem 0;
-        }
-
-        span {
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
-            font-size: 40px;
-        }
-    }
-
-}
 </style>
