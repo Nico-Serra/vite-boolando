@@ -3,7 +3,8 @@ export default {
     name: 'ProductCard',
     props: {
         product: Object,
-    }
+    },
+    emits: ['showProduct']
 }
 </script>
 
@@ -14,7 +15,7 @@ export default {
             <img :src="'/img/' + product.secondImage" alt="" class="image2">
             <div>
                 <div>{{ product.brand }}</div>
-                <h3>{{ product.nameProduct }}</h3>
+                <h3 @click="$emit('showProduct', product)" >{{ product.nameProduct }}</h3>
                 <span class="red">{{ product.salesPrice }}</span>
                 <span v-if="product.price" class="gray">{{ product.price }}</span>
                 <div class="badge">

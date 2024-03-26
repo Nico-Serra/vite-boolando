@@ -1,6 +1,8 @@
 <script>
 import ProductCard from './ProductCard.vue';
+
 import { state } from '../state'
+
 export default {
     name: 'AppMain',
     data() {
@@ -75,26 +77,53 @@ export default {
             ],*/
             state,
             urlApi: 'http://localhost:3000/products',
+            showModal: false,
+            singleProduct: {
+
+            }
         }
     },
     components: {
-        ProductCard
+        ProductCard,
+
     },
+
     mounted() {
         //console.log(this.state.products);
         this.state.addElement(this.urlApi)
         //console.log(state.products);
         //console.log(state.products);
+        console.log(this.singleProduct);
+    },
+    methods: {
+        openModal(product) {
+            console.log('ciao');
+            this.singleProduct = product,
+                this.showModal = true
+
+        }
     }
 }
 </script>
 
 <template>
     <main id="site_main">
+        <div v-if="showModal === true" class="modal">
+            <img :src="'/img/' + singleProduct.firstImage" alt="">
+            <img :src="'/img/' + singleProduct.secondImage" alt="">
+            <div class="text">
+                <h3>Brand: {{ singleProduct.brand }}</h3>
+                <h2>{{ singleProduct.nameProduct }}</h2>
+                <h4>Prezzo scontato: {{ singleProduct.salesPrice }}</h4>
+                <h4 v-if="singleProduct.price">Prezzo: {{ singleProduct.price }}</h4>
+                <span @click="showModal = false">❌</span>
+            </div>
+        </div>
         <div class="container">
+            <h1></h1>
             <!-- <p>{{ state.message }}</p> -->
             <div class="row">
-                <ProductCard :product="product" v-for="product in state.products" />
+                <ProductCard :product="product" v-for="product in state.products" @showProduct="openModal" />
 
             </div>
         </div>
@@ -104,4 +133,36 @@ export default {
 
 </template>
 
-<style></style>
+<style>
+.modal {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid;
+
+    img {
+        max-width: 50%;
+    }
+
+    .text {
+        text-align: center;
+        margin: 1rem;
+
+        h2{
+            padding: 1rem 0;
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            font-size: 40px;
+        }
+    }
+
+}
+</style>
